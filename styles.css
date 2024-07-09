@@ -1,0 +1,877 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    background: #fff;
+    /*background: linear-gradient(to right, rgb(156, 163, 175), rgb(75, 85, 99), rgb(30, 64, 175)); */
+    font-family: "Aeonik_OVERVIEW";
+}
+.hide{
+    opacity: 0;
+    filter: blur(5px);
+    transition: all 1s;
+}
+.show{
+    opacity: 1;
+    filter: blur(0);
+}
+
+
+
+
+
+.preloader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #000;
+    color: #fff;
+  }
+  
+  .loader-text {
+    font-size: 24px;
+  }
+  
+  .content {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+  }
+  .content.visible {
+    opacity: 1;
+  }
+  
+  .hidden {
+    display: none;
+  }
+
+.container {
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+    z-index: 1;
+    font-family: 'Neue Montreal';
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+}
+
+.container .nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 2px solid gray;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+}
+.nav{
+    position: fixed;
+    width: 98.8%;
+    background: #fff;
+    left: 0;
+    z-index: 1000;
+}
+.nav .logo {
+    text-decoration: none;
+    color: #000;
+    font-size: 50px;
+}
+.logo img{
+    width: 25%;
+    position: relative;
+    top: 5px;
+    right: 15px;
+}
+.menu-btn{
+    display: none;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 13px;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #000;
+    font-size: 20px;
+}
+
+
+.home{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 100vh;
+    padding: 50px;
+    opacity: 1;
+
+}
+.hometext{
+    padding-left: 2rem;
+    padding-right: 14rem;
+}
+.hometext h2{
+    margin-top: 10%;
+    font-size: 5rem;
+    padding-bottom: 20px;
+}
+.hometext p{
+    font-size: 17px;
+    line-height: 1.4;
+    padding-bottom: 20px;
+}
+.hometext button{
+    width: 25%;
+    height: 35px;
+    font-size: 20px;
+    border: none;
+    background: linear-gradient(to right, rgb(55, 65, 81), rgb(17, 24, 39), rgb(0, 0, 0));
+    color: #fff;
+    border-radius: 10px;
+    font-family: "Aeonik_OVERVIEW";
+    margin-right: 5px;
+}
+.hometext button:hover{
+    border: 2px solid black;
+    background: transparent;
+    color: #000;
+}
+
+ .hirebtn a{
+    text-decoration: none;
+    color: #fff;
+   
+}
+.hirebtn a:hover{
+    color: #000;
+}
+
+.circle{
+    width: 320px;
+    height: 320px;
+background-image: url(images/homeimg.png);
+background-repeat: no-repeat;
+background-size: cover;
+background-position: center center;
+    border-radius: 50%;
+    box-shadow: inset 10px 12px 24px green,
+    inset -10px 12px 24px blue,
+    inset 10px -12px 24px red,
+    inset 10px 12px 24px pink;;
+   margin-right: 40px;
+   margin-top: 20%;
+
+animation: innercircle 5s infinite;
+}
+@keyframes innercircle {
+    0%{
+        box-shadow: inset 10px 12px 24px aliceblue;
+    }
+    10%{
+        box-shadow: inset 10px -12px 24px blue;
+    } 20%{
+        box-shadow: inset -12px 12px 24px  pink;
+    } 30%{
+        box-shadow: inset 10px -12px 24px paleturquoise;
+    } 40%{
+        box-shadow: inset 10px 12px 24px skyblue;
+    } 50%{
+        box-shadow: inset 10px -12px 24px azure;
+    } 60%{
+        box-shadow: inset -12px 12px 24px aqua;
+    } 70%{
+        box-shadow: inset 10px 12px 24px gray;
+    } 80%{
+        box-shadow: inset 10px -12px 24px blueviolet;
+    } 100%{
+        box-shadow: inset 10px 12px 24px purple;
+    }
+}
+.soicallinks img{
+    width: 4%;
+    padding-top: 10px;
+    position: relative;
+    margin-right: 10px;
+    left: 30px;
+    z-index: -1;
+}
+.quote{
+    background: #000;
+    color: #fff;
+    height: 40vh;
+    text-align: center;
+}
+.quote p{
+    padding-top: 80px;
+    padding-left: 250px;
+    padding-right: 250px;
+    font-size: 20px;
+    line-height: 1.4;
+}
+
+.quote span{
+    font-size: 16px;
+}
+.about{
+    height: 100vh;
+    z-index: -1;
+    margin-left: 150px;
+}
+
+
+.about h1{
+    margin-top: 50px;
+    text-align: center;
+    font-size: 50px;
+}
+
+.aboutdetails button{
+    width: 20%;
+    height: 35px;
+    font-size: 20px;
+    border: none;
+    background: linear-gradient(to right, rgb(55, 65, 81), rgb(17, 24, 39), rgb(0, 0, 0));
+    color: #fff;
+    border-radius: 7px;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
+    font-family: "Aeonik_OVERVIEW";
+    margin-right: 5px;
+    margin-top: 20px;
+  
+}
+  
+
+.abouttext{
+    margin-top: 80px;
+    padding-left: 100px;
+    padding-right: 200px;
+    font-size: 16px;
+    line-height: 1.5;
+
+}
+.aboutcircle img{
+    width: 30%;
+    height: 250px;
+
+background-repeat: no-repeat;
+background-size: cover;
+background-position: center center;
+    border-radius: 50%;
+   float: left;
+   margin-top: -10%;
+}
+.aboutdetails{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.work h1{
+    text-align: center;
+    margin-top: 20px;
+    font-size: 40px;
+}
+
+.workcontainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    gap: 30px;
+    text-align: center;
+}
+.workbox{
+    background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+    border-radius: 7px;
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    border: 2px solid #fff;
+}
+.workbox h3{
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+.workbox p{
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+.workbox button{
+    width: 40%;
+    height: 35px;
+    border-radius: 20px;
+    border: none;
+    background: black;
+    color: #fff;
+    margin-bottom: 20px;
+    cursor: pointer;
+
+}
+.workbox button a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    font-family: Poppins;
+}
+.workbox img{
+    width: 100%;
+    height: 200px;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+
+}
+.contact{
+    background: #000;
+}
+.contact h1{
+    text-align: center;
+    font-size: 40px;
+    color: #fff;
+    padding-top: 10px;
+    margin-bottom: 10px;
+}
+.formcontainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.formcontainer input{
+    width: 100%;
+    background: transparent;
+    padding: 10px;
+    outline: none;
+    font-size: 16px;
+    font-family: Poppins;
+    border: none;
+    border-bottom: 2px solid gray;
+    color: #fff;
+    margin-top: 10px;
+}
+.formcontainer textarea{
+    width: 100%;
+    padding: 10px;
+    background: transparent;
+    outline: none;
+    resize: none;
+    font-size: 16px;
+    font-family: Poppins;
+    border: none;
+    border-bottom: 2px solid gray;
+    color: #fff;
+    margin-top: 15px;
+}
+.formcontainer button{
+    width: 20%;
+    padding: 10px;
+    text-align: center;
+    border: none;
+    background: #fff;
+    color: #000;
+    font-size: 18px;
+    font-family: Poppins;
+    border-radius: 20px;
+    margin-top: 15px;
+    position: relative;
+    left: 40%;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+.formcontainer button:hover{
+    border:2px solid  #fff;
+    background: #000;
+    color: #fff;
+}
+
+
+@media only screen and (max-width: 430px){
+    .hide{
+        opacity: 1;
+        filter: blur(0);
+        transition: all 1s;
+    }
+    .show{
+        opacity: 1;
+        filter: blur(0);
+    }
+.content{
+    background: #fff;
+}
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    border-bottom: 2px solid gray;
+    width: 100%;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+}
+.menu-btn{
+    display: block; 
+    text-align: right;
+    position: relative;
+    right: -45px;
+}
+.menu-btn img{
+    width: 50%;
+   
+}
+
+nav ul {
+     display: flex;
+     flex-direction: column;
+     gap: 100px;
+     position: fixed;
+     background: #000;
+     border-bottom-left-radius: 20px;
+     right:-100%;
+     top: 80px;
+     width: 50%;
+     height: 50vh;
+     padding-top: 30px;
+     z-index: 1000;
+     transition: right 0.3s ease; 
+}
+  
+nav ul.open {
+    right: 0%; 
+}
+
+nav ul li a{
+    color: #fff;
+    font-size: 20px;
+}
+nav ul li a:active{
+    text-decoration: line-through;
+}
+nav ul li a:hover{
+    text-decoration: line-through;
+}
+.home{
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+}
+
+
+.circle{
+    width: 250px;
+    height: 250px;
+   margin-right: 0px;
+
+animation: innercircle 5s infinite;
+}
+.hometext{
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 200px;
+}
+.hometext h2{
+    font-size: 40px;
+}
+.hometext button{
+    width: 40%;
+    font-size: 16px;
+    cursor: pointer;
+}
+.quote{
+    margin-top: 75px;
+    height: 40vh;
+    text-align: center;
+}
+.quote p{
+    padding-top: 95px;
+    padding-left: 2px;
+    padding-right: 2px;
+    font-size: 20px;
+}
+.about{
+    height: 100vh;
+    z-index: -1;
+    margin-left: 0px;
+}
+
+
+.about h1{
+    margin-top: 50px;
+    text-align: center;
+    font-size: 40px;
+}
+.abouttext{
+    margin-top: 80px;
+    padding-left: 20px;
+    padding-right: 18px;
+    font-size: 17px;
+    line-height: 1.5;
+
+}
+.aboutcircle img{
+    width: 60%;
+    height: 250px;
+   margin-top: -10%;
+}
+.abouttext button{
+    width: 40%;
+    font-size: 16px;
+}
+.work{
+    margin-top: 55%;
+    height: 100vh;
+}
+.work h1{
+    text-align: center;
+    margin-top: 20px;
+    font-size: 40px;
+}
+.workcontainer{
+    display: flex;
+    flex-direction: column;
+}
+.contact{
+    margin-top: 280%;
+}
+
+.formcontainer{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.formcontainer button{
+    width: 30%;
+}
+}
+
+
+
+@media only screen and (max-width: 380px){
+    .hide{
+        opacity: 1;
+        filter: blur(0);
+        transition: all 1s;
+    }
+    .show{
+        opacity: 1;
+        filter: blur(0);
+    }
+.content{
+    background: #fff;
+}
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    border-bottom: 2px solid gray;
+    width: 100%;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+}
+.menu-btn{
+    display: block; 
+    text-align: right;
+    position: relative;
+    right: -45px;
+}
+.menu-btn img{
+    width: 50%;
+   
+}
+
+nav ul {
+     display: flex;
+     flex-direction: column;
+     gap: 100px;
+     position: fixed;
+     background: #000;
+     border-bottom-left-radius: 20px;
+     right:-100%;
+     top: 80px;
+     width: 50%;
+     height: 50vh;
+     padding-top: 30px;
+     z-index: 1000;
+     transition: right 0.3s ease; 
+}
+  
+nav ul.open {
+    right: 0%; 
+}
+
+nav ul li a{
+    color: #fff;
+    font-size: 20px;
+}
+nav ul li a:active{
+    text-decoration: line-through;
+}
+nav ul li a:hover{
+    text-decoration: line-through;
+}
+.home{
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+}
+
+
+.circle{
+    width: 250px;
+    height: 250px;
+   margin-right: 0px;
+
+animation: innercircle 5s infinite;
+}
+.hometext{
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 200px;
+}
+.hometext h2{
+    font-size: 40px;
+}
+.hometext button{
+    width: 40%;
+    font-size: 16px;
+    cursor: pointer;
+}
+.quote{
+    margin-top: 75px;
+    height: 40vh;
+    text-align: center;
+}
+.quote p{
+    padding-top: 58px;
+    padding-left: 2px;
+    padding-right: 2px;
+    font-size: 18px;
+}
+.about{
+    height: 100vh;
+    z-index: -1;
+    margin-left: 0px;
+}
+
+
+.about h1{
+    margin-top: 50px;
+    text-align: center;
+    font-size: 40px;
+}
+.abouttext{
+    margin-top: 80px;
+    padding-left: 20px;
+    padding-right: 18px;
+    font-size: 17px;
+    line-height: 1.5;
+
+}
+.aboutcircle img{
+    width: 60%;
+    height: 250px;
+   margin-top: -10%;
+}
+.abouttext button{
+    width: 40%;
+    font-size: 16px;
+}
+.work{
+    margin-top: 105%;
+    height: 100vh;
+}
+.work h1{
+    text-align: center;
+    margin-top: 20px;
+    font-size: 40px;
+}
+.workcontainer{
+    display: flex;
+    flex-direction: column;
+}
+.contact{
+    margin-top: 410%;
+}
+
+.formcontainer{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.formcontainer button{
+    width: 30%;
+}
+}
+
+
+
+@media (min-device-width: 800px) and (max-device-width: 1200px){
+    .hide{
+        opacity: 1;
+        filter: blur(0);
+        transition: all 1s;
+    }
+    .show{
+        opacity: 1;
+        filter: blur(0);
+    }
+.content{
+    background: orange;
+}
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    border-bottom: 2px solid gray;
+    width: 100%;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+}
+.menu-btn{
+    display: block; 
+    text-align: right;
+    position: relative;
+    right: -255px;
+}
+.menu-btn img{
+    width: 50%;
+   
+}
+
+nav ul {
+     display: flex;
+     flex-direction: column;
+     gap: 100px;
+     position: fixed;
+     background: #000;
+     border-bottom-left-radius: 20px;
+     right:-100%;
+     top: 80px;
+     width: 50%;
+     height: 50vh;
+     padding-top: 30px;
+     z-index: 1000;
+     transition: right 0.3s ease; 
+}
+  
+nav ul.open {
+    right: 0%; 
+}
+
+nav ul li a{
+    color: #fff;
+    font-size: 20px;
+}
+nav ul li a:active{
+    text-decoration: line-through;
+}
+nav ul li a:hover{
+    text-decoration: line-through;
+}
+.home{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 60px;
+    height: 60vh;
+    padding:15px;
+    opacity: 1;
+
+}
+
+
+.circle{
+    width: 350px;
+    height: 350px;
+   margin-right: 0px;
+
+animation: innercircle 5s infinite;
+}
+.hometext{
+    padding-left: 5px;
+    padding-right: 5px;
+    
+}
+.hometext h2{
+    font-size: 50px;
+}
+.hometext button{
+    width: 40%;
+    font-size: 20px;
+    cursor: pointer;
+}
+.quote{
+    margin-top: 75px;
+    height: 30vh;
+    text-align: center;
+}
+.quote p{
+    padding-top: 95px;
+    padding-left: 22px;
+    padding-right: 22px;
+    font-size: 20px;
+}
+.about{
+    height: 100vh;
+    z-index: -1;
+    margin-left: 0px;
+}
+
+
+.about h1{
+    margin-top: 50px;
+    text-align: center;
+    font-size: 40px;
+}
+.abouttext{
+    margin-top: 80px;
+    padding-left: 35px;
+    padding-right: 35px;
+    font-size: 17px;
+    line-height: 1.5;
+
+}
+.aboutcircle img{
+    width: 50%;
+    height: 350px;
+   margin-top: -10%;
+}
+.abouttext button{
+    width: 40%;
+    font-size: 20px;
+}
+.work{
+    margin-top: -30%;
+    height: 100vh;
+}
+.work h1{
+    text-align: center;
+    margin-top: 20px;
+    font-size: 40px;
+}
+.workcontainer{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.contact{
+    margin-top: 20%;
+}
+
+.formcontainer{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.formcontainer button{
+    width: 30%;
+}
+}
+
+
+
